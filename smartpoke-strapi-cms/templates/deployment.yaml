@@ -41,13 +41,13 @@ spec:
             - name: "DATABASE_NAME"
               value: "strapi"
             - name: "DATABASE_HOST"
-              value: "smartpoke-strapi-postgresql-headless"
+              value: "smartpoke-strapi-postgresql-hl"
             - name: "DATABASE_USERNAME"
-              value: {{ .Values.postgresql.postgresqlUsername }}
+              value: "strapi"
             - name: "DATABASE_PASSWORD"
               valueFrom:
                 secretKeyRef:
-                  key:  postgresql-password
+                  key:  password
                   name: "smartpoke-strapi-postgresql"
             - name: "APP_KEYS"
               valueFrom:
