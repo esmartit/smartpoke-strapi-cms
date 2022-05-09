@@ -48,7 +48,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   key:  postgresql-password
-                  name: "{{ .Values.fullnameOverride }}-postgresql"
+                  name: "smartpoke-strapi-postgresql"
             - name: "APP_KEYS"
               valueFrom:
                 secretKeyRef:
