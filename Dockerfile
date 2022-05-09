@@ -1,17 +1,16 @@
-FROM node:16
-# Installing libvips-dev for sharp compatability
-RUN apt-get update && apt-get install libvips-dev -y
-ARG NODE_ENV=development
-ENV NODE_ENV=${NODE_ENV}
-WORKDIR /opt/
+FROM strapi/base
+WORKDIR /opt/app
 COPY ./package.json ./
 COPY ./yarn.lock ./
-ENV PATH /opt/node_modules/.bin:$PATH
-RUN yarn config set network-timeout 600000 -g
 RUN yarn install
-WORKDIR /opt/app
-COPY ./ .
+COPY . ./
+ENV NODE_ENV production
+ENV DATABASE_CLIENT=mysql
+ENV DATABASE_NAME=strapi
+ENV DATABASE_HOST=strapi-db
+ENV DATABASE_PORT=3306
+ENV DATABASE_USERNAME=strapi
+ENV DATABASE_PASSWORD=strapi
 RUN yarn build
 EXPOSE 1337
-CMD ["yarn", "develop"]
-
+CMD ["yarn", "start"]
