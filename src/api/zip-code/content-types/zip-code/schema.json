@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zip_codes",
+  "info": {
+    "singularName": "zip-code",
+    "pluralName": "zip-codes",
+    "displayName": "ZipCodes"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "zipCode": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "zip_codes"
+    },
+    "spots": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::spot.spot",
+      "mappedBy": "zip_code"
+    }
+  }
+}

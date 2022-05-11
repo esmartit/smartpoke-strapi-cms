@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "Customers",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "mobilePhone": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Woman",
+        "Man",
+        "Other"
+      ],
+      "required": true
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "member": {
+      "type": "boolean"
+    },
+    "communication": {
+      "type": "boolean",
+      "required": true
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "hot_spot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hot-spot.hot-spot",
+      "inversedBy": "customers"
+    }
+  }
+}

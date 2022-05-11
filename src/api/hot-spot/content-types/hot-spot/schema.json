@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hot_spots",
+  "info": {
+    "singularName": "hot-spot",
+    "pluralName": "hot-spots",
+    "displayName": "hotSpots",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "tags": {
+      "type": "json"
+    },
+    "spot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::spot.spot",
+      "inversedBy": "hot_spots"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "customers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer.customer",
+      "mappedBy": "hot_spot"
+    }
+  }
+}

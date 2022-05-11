@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaigns",
+  "info": {
+    "singularName": "campaign",
+    "pluralName": "campaigns",
+    "displayName": "Campaigns",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "validDate": {
+      "type": "date",
+      "required": true
+    },
+    "comunicationMedia": {
+      "type": "enumeration",
+      "enum": [
+        "SMS",
+        "email",
+        "WhatsApp"
+      ],
+      "required": true,
+      "default": "SMS"
+    },
+    "message": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 50
+    },
+    "deferred": {
+      "type": "boolean"
+    },
+    "deferredDate": {
+      "type": "datetime"
+    },
+    "percent": {
+      "type": "decimal"
+    },
+    "valueIn": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message.message",
+      "mappedBy": "campaign"
+    }
+  }
+}
