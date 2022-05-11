@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sensors",
+  "info": {
+    "singularName": "sensor",
+    "pluralName": "sensors",
+    "displayName": "Sensors",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sensorId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "zone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::zone.zone",
+      "inversedBy": "sensors"
+    },
+    "pwrIn": {
+      "type": "integer",
+      "required": true
+    },
+    "pwrLimit": {
+      "type": "integer",
+      "required": true
+    },
+    "pwrOut": {
+      "type": "integer",
+      "required": true
+    },
+    "spot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::spot.spot",
+      "inversedBy": "sensors"
+    },
+    "apMac": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": "json"
+    }
+  }
+}

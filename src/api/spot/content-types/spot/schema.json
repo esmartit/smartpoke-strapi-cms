@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spots",
+  "info": {
+    "singularName": "spot",
+    "pluralName": "spots",
+    "displayName": "Spots",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "spotId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "business_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::business-type.business-type"
+    },
+    "zones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::zone.zone",
+      "mappedBy": "spot"
+    },
+    "devices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::device.device",
+      "mappedBy": "spot"
+    },
+    "values": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::value.value",
+      "mappedBy": "spot"
+    },
+    "sensors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sensor.sensor",
+      "mappedBy": "spot"
+    },
+    "hot_spots": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hot-spot.hot-spot",
+      "mappedBy": "spot"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country",
+      "inversedBy": "spots"
+    },
+    "state": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::state.state",
+      "inversedBy": "spots"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "spots"
+    },
+    "zip_code": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::zip-code.zip-code",
+      "inversedBy": "spots"
+    }
+  }
+}
