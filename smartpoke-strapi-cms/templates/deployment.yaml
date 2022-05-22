@@ -35,9 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: "NODE_ENV"
-              value: "production"
-            - name: "PUBLIC_URL"
-              value: "{{ .Values.strapi.publicUrl }}"
+              value: "production"            
             - name: "DATABASE_CLIENT"
               value: "postgres"
             - name: "DATABASE_NAME"
