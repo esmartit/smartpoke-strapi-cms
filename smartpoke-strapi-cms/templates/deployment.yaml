@@ -36,6 +36,8 @@ spec:
           env:
             - name: "NODE_ENV"
               value: "production"
+            - name: "PUBLIC_URL"
+              value: "{{ .Values.strapi.publicUrl }}"
             - name: "DATABASE_CLIENT"
               value: "postgres"
             - name: "DATABASE_NAME"
