@@ -84,3 +84,6 @@ postgresql:
   auth:
     database: strapi
     username: strapi
+
+strapi:
+  publicUrl: ""

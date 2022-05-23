@@ -34,6 +34,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            - nme: "PUBLIC_URL"
+              value: "{{ .Values.strapi.publicUrl }}"
             - name: "NODE_ENV"
               value: "production"            
             - name: "DATABASE_CLIENT"
