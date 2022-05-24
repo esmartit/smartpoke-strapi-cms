@@ -15,7 +15,9 @@
     "@strapi/plugin-users-permissions": "4.1.9",
     "@strapi/strapi": "4.1.9",
     "better-sqlite3": "7.4.6",
-    "pg": "^8.7.3"
+    "kafkajs": "^2.0.1",
+    "pg": "^8.7.3",
+    "socket.io": "^4.5.1"
   },
   "author": {
     "name": "A Strapi developer"

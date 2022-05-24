@@ -87,3 +87,4 @@ postgresql:
 
 strapi:
   publicUrl: ""
+  kafkaHost: "event-bus-kafka.dev-env.svc.cluster.local:9092"
