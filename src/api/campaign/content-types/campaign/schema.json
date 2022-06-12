@@ -20,11 +20,11 @@
       "type": "date",
       "required": true
     },
-    "comunicationMedia": {
+    "mediaType": {
       "type": "enumeration",
       "enum": [
         "SMS",
-        "email",
+        "Email",
         "WhatsApp"
       ],
       "required": true,

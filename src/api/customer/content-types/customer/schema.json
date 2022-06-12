@@ -35,8 +35,8 @@
     "gender": {
       "type": "enumeration",
       "enum": [
-        "Woman",
-        "Man",
+        "Female",
+        "Male",
         "Other"
       ],
       "required": true
