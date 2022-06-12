@@ -47,7 +47,8 @@
     },
     "apMac": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "tags": {
       "type": "json"

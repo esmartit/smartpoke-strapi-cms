@@ -4,7 +4,8 @@
   "info": {
     "singularName": "city",
     "pluralName": "cities",
-    "displayName": "Cities"
+    "displayName": "Cities",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,7 @@
     "cityCode": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "name": {
       "type": "string",
