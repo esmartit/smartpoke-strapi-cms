@@ -1,4 +1,6 @@
-module.exports = {
+module.exports = ({ env }) => {  
+
+  return {
     'kafka-websocket': {
         enabled: true,
         resolve: './src/plugins/kafka-websocket'
@@ -8,3 +10,4 @@ module.exports = {
       resolve: './src/plugins/kafka-plugin'
     },    
   }
+}

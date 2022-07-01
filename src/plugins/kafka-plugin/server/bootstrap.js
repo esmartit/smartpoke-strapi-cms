@@ -22,6 +22,14 @@ const initConsumer = async (strapi) => {
   })
 }
 
-module.exports = ({ strapi }) => {
-  initConsumer(strapi)
+module.exports = ({ strapi }) => {  
+
+  const kafkaEnabled = (strapi.config.get("server.kafka_enabled").toLowerCase() === 'true');  
+
+  if(kafkaEnabled === true){
+    console.log(`KAFKA IS ENABLED, CONSUMING MESSAGES`)
+    initConsumer(strapi)
+  }else{
+    console.log(`KAFKA IS NOT ENABLED, NOT CONSUMING MESSAGES`)
+  }
 };
