@@ -19,13 +19,17 @@
     "valueCode": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "spot": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::spot.spot",
       "inversedBy": "values"
+    },
+    "valueKey": {
+      "type": "string",
+      "unique": true
     }
   }
 }
