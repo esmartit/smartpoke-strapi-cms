@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stored_events",
+  "info": {
+    "singularName": "stored-event",
+    "pluralName": "stored-events",
+    "displayName": "storedEvent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "processed": {
+      "type": "boolean",
+      "default": false
+    },
+    "payload": {
+      "type": "json",
+      "required": true
+    },
+    "eventId": {
+      "type": "string"
+    }
+  }
+}
