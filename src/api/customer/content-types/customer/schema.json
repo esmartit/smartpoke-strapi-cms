@@ -59,6 +59,18 @@
       "relation": "manyToOne",
       "target": "api::hot-spot.hot-spot",
       "inversedBy": "customers"
+    },
+    "scan_api_activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::scan-api-activity.scan-api-activity",
+      "mappedBy": "username"
+    },
+    "scan_api_activity_hours": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::scan-api-activity-hour.scan-api-activity-hour",
+      "mappedBy": "username"
     }
   }
 }
