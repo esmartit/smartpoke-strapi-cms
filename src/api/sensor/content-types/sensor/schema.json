@@ -52,6 +52,24 @@
     },
     "tags": {
       "type": "json"
+    },
+    "scan_api_activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::scan-api-activity.scan-api-activity",
+      "mappedBy": "sensor"
+    },
+    "scan_api_activity_dates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::scan-api-activity-date.scan-api-activity-date",
+      "mappedBy": "sensor"
+    },
+    "scan_api_activity_hours": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::scan-api-activity-hour.scan-api-activity-hour",
+      "mappedBy": "sensor"
     }
   }
 }

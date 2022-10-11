@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scan_api_activity_hours",
+  "info": {
+    "singularName": "scan-api-activity-hour",
+    "pluralName": "scan-api-activity-hours",
+    "displayName": "scanApiActivityHour",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "activityId": {
+      "type": "string"
+    },
+    "dateAtZone": {
+      "type": "datetime"
+    },
+    "spot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::spot.spot",
+      "inversedBy": "scan_api_activity_hours"
+    },
+    "zone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::zone.zone",
+      "inversedBy": "scan_api_activity_hours"
+    },
+    "sensor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sensor.sensor",
+      "inversedBy": "scan_api_activity_hours"
+    },
+    "clientMac": {
+      "type": "string"
+    },
+    "username": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "scan_api_activity_hours"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "ssid": {
+      "type": "string"
+    },
+    "isConnected": {
+      "type": "boolean"
+    },
+    "totalTime": {
+      "type": "integer"
+    },
+    "minTime": {
+      "type": "datetime"
+    },
+    "maxTime": {
+      "type": "datetime"
+    }
+  }
+}

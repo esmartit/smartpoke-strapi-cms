@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scan_api_activity_dates",
+  "info": {
+    "singularName": "scan-api-activity-date",
+    "pluralName": "scan-api-activity-dates",
+    "displayName": "scanApiActivityDate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "activityId": {
+      "type": "string"
+    },
+    "dateAtZone": {
+      "type": "date"
+    },
+    "spot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::spot.spot",
+      "inversedBy": "scan_api_activity_dates"
+    },
+    "zone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::zone.zone",
+      "inversedBy": "scan_api_activity_dates"
+    },
+    "sensor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sensor.sensor",
+      "inversedBy": "scan_api_activity_dates"
+    },
+    "clientMac": {
+      "type": "string"
+    },
+    "username": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "ssid": {
+      "type": "string"
+    },
+    "isConnected": {
+      "type": "boolean"
+    },
+    "totalTime": {
+      "type": "integer"
+    },
+    "minTime": {
+      "type": "datetime"
+    },
+    "maxTime": {
+      "type": "datetime"
+    }
+  }
+}
