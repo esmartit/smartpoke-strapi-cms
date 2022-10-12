@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "total_device_alls",
+  "info": {
+    "singularName": "total-device-all",
+    "pluralName": "total-device-alls",
+    "displayName": "totalDeviceAll"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "count": {
+      "type": "biginteger"
+    }
+  }
+}

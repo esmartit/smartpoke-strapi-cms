@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "total_status_dates",
+  "info": {
+    "singularName": "total-status-date",
+    "pluralName": "total-status-dates",
+    "displayName": "TotalStatusDate"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dateAtZone": {
+      "type": "date"
+    },
+    "spot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::spot.spot",
+      "inversedBy": "total_status_dates"
+    },
+    "IN": {
+      "type": "biginteger"
+    },
+    "LIMIT": {
+      "type": "biginteger"
+    },
+    "OUT": {
+      "type": "biginteger"
+    }
+  }
+}

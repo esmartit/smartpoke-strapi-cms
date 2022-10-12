@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unique_devices",
+  "info": {
+    "singularName": "unique-device",
+    "pluralName": "unique-devices",
+    "displayName": "uniqueDevice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clientMac": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unique_device_years",
+  "info": {
+    "singularName": "unique-device-year",
+    "pluralName": "unique-device-years",
+    "displayName": "uniqueDeviceYear",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uniqueId": {
+      "type": "string",
+      "unique": true
+    },
+    "clientMac": {
+      "type": "string",
+      "unique": true
+    },
+    "seenTime": {
+      "type": "datetime"
+    },
+    "year": {
+      "type": "integer"
+    }
+  }
+}
