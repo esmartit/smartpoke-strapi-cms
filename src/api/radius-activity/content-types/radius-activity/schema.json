@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "radius_activities",
+  "info": {
+    "singularName": "radius-activity",
+    "pluralName": "radius-activities",
+    "displayName": "radiusActivity"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "info": {
+      "type": "json"
+    }
+  }
+}

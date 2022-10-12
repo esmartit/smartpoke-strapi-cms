@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registered_users",
+  "info": {
+    "singularName": "registered-user",
+    "pluralName": "registered-users",
+    "displayName": "registeredUser"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "info": {
+      "type": "json"
+    }
+  }
+}
