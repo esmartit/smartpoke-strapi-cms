@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "activityId": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "dateAtZone": {
       "type": "date"

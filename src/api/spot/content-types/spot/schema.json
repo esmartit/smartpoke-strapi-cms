@@ -107,6 +107,18 @@
       "relation": "oneToMany",
       "target": "api::scan-api-activity-hour.scan-api-activity-hour",
       "mappedBy": "spot"
+    },
+    "total_status_hours": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::total-status-hour.total-status-hour",
+      "mappedBy": "spot"
+    },
+    "total_status_dates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::total-status-date.total-status-date",
+      "mappedBy": "spot"
     }
   }
 }

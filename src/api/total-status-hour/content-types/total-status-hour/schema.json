@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "total_status_hours",
+  "info": {
+    "singularName": "total-status-hour",
+    "pluralName": "total-status-hours",
+    "displayName": "totalStatusHour"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dateAtZone": {
+      "type": "datetime",
+      "unique": true
+    },
+    "spot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::spot.spot",
+      "inversedBy": "total_status_hours"
+    },
+    "IN": {
+      "type": "biginteger"
+    },
+    "LIMIT": {
+      "type": "biginteger"
+    },
+    "OUT": {
+      "type": "biginteger"
+    }
+  }
+}
