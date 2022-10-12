@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cms_pages",
+  "info": {
+    "singularName": "cms-page",
+    "pluralName": "cms-pages",
+    "displayName": "cmsPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "boolean"
+    },
+    "erased": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "folder": {
+      "type": "string"
+    },
+    "autor": {
+      "type": "string"
+    },
+    "spot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::spot.spot",
+      "inversedBy": "cms_pages"
+    },
+    "groupname": {
+      "type": "string"
+    },
+    "spotname": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "content": {
+      "type": "json"
+    }
+  }
+}

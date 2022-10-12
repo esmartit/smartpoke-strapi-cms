@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cms_devices",
+  "info": {
+    "singularName": "cms-device",
+    "pluralName": "cms-devices",
+    "displayName": "cmsDevice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "htmlHidden": {
+      "type": "text"
+    },
+    "jsVar": {
+      "type": "text"
+    },
+    "jsReady": {
+      "type": "text"
+    },
+    "jsDataLogin": {
+      "type": "text"
+    },
+    "jsElseLogin": {
+      "type": "text"
+    },
+    "jsDataRegister": {
+      "type": "text"
+    },
+    "jsElseRegister": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

@@ -119,6 +119,12 @@
       "relation": "oneToMany",
       "target": "api::total-status-date.total-status-date",
       "mappedBy": "spot"
+    },
+    "cms_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cms-page.cms-page",
+      "mappedBy": "spot"
     }
   }
 }
