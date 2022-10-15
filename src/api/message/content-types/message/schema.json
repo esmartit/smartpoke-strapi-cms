@@ -4,7 +4,7 @@
   "info": {
     "singularName": "message",
     "pluralName": "messages",
-    "displayName": "Messages"
+    "displayName": "messages"
   },
   "options": {
     "draftAndPublish": true

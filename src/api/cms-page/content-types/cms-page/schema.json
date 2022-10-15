@@ -4,7 +4,7 @@
   "info": {
     "singularName": "cms-page",
     "pluralName": "cms-pages",
-    "displayName": "cmsPage"
+    "displayName": "cmsPages"
   },
   "options": {
     "draftAndPublish": true
