@@ -4,7 +4,7 @@
   "info": {
     "singularName": "cms-device",
     "pluralName": "cms-devices",
-    "displayName": "cmsDevice"
+    "displayName": "cmsDevices"
   },
   "options": {
     "draftAndPublish": true

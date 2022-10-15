@@ -4,7 +4,7 @@
   "info": {
     "singularName": "total-status-date",
     "pluralName": "total-status-dates",
-    "displayName": "TotalStatusDate"
+    "displayName": "totalStatusDate"
   },
   "options": {
     "draftAndPublish": true
